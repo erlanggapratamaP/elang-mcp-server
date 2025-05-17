@@ -719,6 +719,7 @@ declare class AbortController {
  * [MDN Reference](https://developer.mozilla.org/docs/Web/API/AbortSignal)
  */
 declare abstract class AbortSignal extends EventTarget {
+    finished: any;
     /* [MDN Reference](https://developer.mozilla.org/docs/Web/API/AbortSignal/abort_static) */
     static abort(reason?: any): AbortSignal;
     /* [MDN Reference](https://developer.mozilla.org/docs/Web/API/AbortSignal/timeout_static) */

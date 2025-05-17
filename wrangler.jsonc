@@ -10,6 +10,10 @@
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
+	/**
+	 * Optional: Jika Anda ingin menggunakan Durable Objects untuk penyimpanan state
+	 * Jika tidak diperlukan, Anda bisa menghapus bagian ini
+	 */
 	"migrations": [
 		{
 			"new_sqlite_classes": [
@@ -28,6 +32,12 @@
 	},
 	"observability": {
 		"enabled": true
+	},
+	/**
+	 * Jika Anda memerlukan environment variables
+	 */
+	"vars": {
+		"ENABLE_LOGGING": "true"
 	}
 	/**
 	 * Smart Placement
