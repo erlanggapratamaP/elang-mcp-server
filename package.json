@@ -2,7 +2,7 @@
 	"name": "github-mcp-elang",
 	"version": "0.0.1",
 	"private": true,
-	"description": "Model Context Protocol server untuk menghubungkan Claude dengan GitHub",
+	"description": "A GitHub Action to deploy a Model Context Protocol (MCP) worker to Cloudflare Workers.",
 	"main": "src/index.ts",
 	"scripts": {
 		"deploy": "wrangler deploy",

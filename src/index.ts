@@ -46,7 +46,7 @@ interface SSEClient {
 
 let sseClients: SSEClient[] = [];
 
-// Fungsi untuk validasi token GitHub
+// Function to validate GitHub token
 function validateGitHubToken(token: string | undefined): boolean {
   if (!token || typeof token !== 'string' || token.trim() === '') {
     return false;
@@ -54,7 +54,7 @@ function validateGitHubToken(token: string | undefined): boolean {
   return true;
 }
 
-// Handler untuk mengambil struktur repositori
+// Handler to get repo structure 
 async function getRepositoryStructure(
   octokit: Octokit, 
   owner: string, 
@@ -105,7 +105,7 @@ async function getRepositoryStructure(
   }
 }
 
-// Handler untuk mengambil konten file
+// Handler to get file content
 async function getFileContent(
   octokit: Octokit, 
   owner: string, 
@@ -119,7 +119,7 @@ async function getFileContent(
       path,
     });
 
-    // GitHub API mengembalikan konten dalam base64
+    // GitHub API to return into base64
     if ('content' in response.data) {
       const content = Buffer.from(response.data.content, 'base64').toString('utf-8');
       return content;
